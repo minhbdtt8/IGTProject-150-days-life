@@ -1,0 +1,553 @@
+fileFormatVersion: 2
+guid: e862ce43e5dcd32829405de5f07d5ec4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7113063332354061778
+    second: 2DPIXX - Modern City - Casual Adult 3 - Female - Walk_0
+  - first:
+      213: 6377177668168734558
+    second: 2DPIXX - Modern City - Casual Adult 3 - Female - Walk_1
+  - first:
+      213: 6290340535144065593
+    second: 2DPIXX - Modern City - Casual Adult 3 - Female - Walk_2
+  - first:
+      213: -8048606795581976640
+    second: 2DPIXX - Modern City - Casual Adult 3 - Female - Walk_3
+  - first:
+      213: 2329067516317940460
+    second: 2DPIXX - Modern City - Casual Adult 3 - Female - Walk_4
+  - first:
+      213: 5800899674236677872
+    second: 2DPIXX - Modern City - Casual Adult 3 - Female - Walk_5
+  - first:
+      213: -5935920501591826554
+    second: 2DPIXX - Modern City - Casual Adult 3 - Female - Walk_6
+  - first:
+      213: -8070259187933408007
+    second: 2DPIXX - Modern City - Casual Adult 3 - Female - Walk_7
+  - first:
+      213: -4597027381300796723
+    second: 2DPIXX - Modern City - Casual Adult 3 - Female - Walk_8
+  - first:
+      213: 1897120396736866016
+    second: 2DPIXX - Modern City - Casual Adult 3 - Female - Walk_9
+  - first:
+      213: -3522447021753545757
+    second: 2DPIXX - Modern City - Casual Adult 3 - Female - Walk_10
+  - first:
+      213: -6015340580073492923
+    second: 2DPIXX - Modern City - Casual Adult 3 - Female - Walk_11
+  - first:
+      213: 54618278344413320
+    second: 2DPIXX - Modern City - Casual Adult 3 - Female - Walk_12
+  - first:
+      213: 1621023791061287564
+    second: 2DPIXX - Modern City - Casual Adult 3 - Female - Walk_13
+  - first:
+      213: -4378537909539626970
+    second: 2DPIXX - Modern City - Casual Adult 3 - Female - Walk_14
+  - first:
+      213: 3131461634781067487
+    second: 2DPIXX - Modern City - Casual Adult 3 - Female - Walk_15
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 2DPIXX - Modern City - Casual Adult 3 - Female - Walk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2a0e2af592594d90800000000000000
+      internalID: -7113063332354061778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DPIXX - Modern City - Casual Adult 3 - Female - Walk_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 768
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5750cc2d49408850800000000000000
+      internalID: 6377177668168734558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DPIXX - Modern City - Casual Adult 3 - Female - Walk_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 768
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93aa0899367cb4750800000000000000
+      internalID: 6290340535144065593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DPIXX - Modern City - Casual Adult 3 - Female - Walk_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 768
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cf8a8443ca9d4090800000000000000
+      internalID: -8048606795581976640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DPIXX - Modern City - Casual Adult 3 - Female - Walk_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cea3800f092825020800000000000000
+      internalID: 2329067516317940460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DPIXX - Modern City - Casual Adult 3 - Female - Walk_5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 512
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fe6e8ce48fe08050800000000000000
+      internalID: 5800899674236677872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DPIXX - Modern City - Casual Adult 3 - Female - Walk_6
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68f19afe0cf5f9da0800000000000000
+      internalID: -5935920501591826554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DPIXX - Modern City - Casual Adult 3 - Female - Walk_7
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 512
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f495e1d60ea00090800000000000000
+      internalID: -8070259187933408007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DPIXX - Modern City - Casual Adult 3 - Female - Walk_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc262dae3f31430c0800000000000000
+      internalID: -4597027381300796723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DPIXX - Modern City - Casual Adult 3 - Female - Walk_9
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e626af03fce35a10800000000000000
+      internalID: 1897120396736866016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DPIXX - Modern City - Casual Adult 3 - Female - Walk_10
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eb4f30b811cd1fc0800000000000000
+      internalID: -3522447021753545757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DPIXX - Modern City - Casual Adult 3 - Female - Walk_11
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54e2ab1fc97358ca0800000000000000
+      internalID: -6015340580073492923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DPIXX - Modern City - Casual Adult 3 - Female - Walk_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88056f6e80b02c000800000000000000
+      internalID: 54618278344413320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DPIXX - Modern City - Casual Adult 3 - Female - Walk_13
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c824aa6ac880f7610800000000000000
+      internalID: 1621023791061287564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DPIXX - Modern City - Casual Adult 3 - Female - Walk_14
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6202f4248fe4c33c0800000000000000
+      internalID: -4378537909539626970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2DPIXX - Modern City - Casual Adult 3 - Female - Walk_15
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd8b3e004cf257b20800000000000000
+      internalID: 3131461634781067487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      2DPIXX - Modern City - Casual Adult 3 - Female - Walk_0: -7113063332354061778
+      2DPIXX - Modern City - Casual Adult 3 - Female - Walk_1: 6377177668168734558
+      2DPIXX - Modern City - Casual Adult 3 - Female - Walk_10: -3522447021753545757
+      2DPIXX - Modern City - Casual Adult 3 - Female - Walk_11: -6015340580073492923
+      2DPIXX - Modern City - Casual Adult 3 - Female - Walk_12: 54618278344413320
+      2DPIXX - Modern City - Casual Adult 3 - Female - Walk_13: 1621023791061287564
+      2DPIXX - Modern City - Casual Adult 3 - Female - Walk_14: -4378537909539626970
+      2DPIXX - Modern City - Casual Adult 3 - Female - Walk_15: 3131461634781067487
+      2DPIXX - Modern City - Casual Adult 3 - Female - Walk_2: 6290340535144065593
+      2DPIXX - Modern City - Casual Adult 3 - Female - Walk_3: -8048606795581976640
+      2DPIXX - Modern City - Casual Adult 3 - Female - Walk_4: 2329067516317940460
+      2DPIXX - Modern City - Casual Adult 3 - Female - Walk_5: 5800899674236677872
+      2DPIXX - Modern City - Casual Adult 3 - Female - Walk_6: -5935920501591826554
+      2DPIXX - Modern City - Casual Adult 3 - Female - Walk_7: -8070259187933408007
+      2DPIXX - Modern City - Casual Adult 3 - Female - Walk_8: -4597027381300796723
+      2DPIXX - Modern City - Casual Adult 3 - Female - Walk_9: 1897120396736866016
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
