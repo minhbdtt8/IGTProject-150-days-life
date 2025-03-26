@@ -9,6 +9,15 @@ TagManager:
   - pay
   - Hook
   - SleepPoint
+  - Ground
+  - EnemyBase
+  - PlayerBase
+  - Triangle
+  - Square
+  - Hexagon
+  - Base
+  - Enemy
+  - Food
   layers:
   - Default
   - TransparentFX
