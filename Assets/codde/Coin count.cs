@@ -1,81 +1,4 @@
-﻿
-
-
-//using System.Collections;
-//using System.Collections.Generic;
-//using UnityEngine;
-//using UnityEngine.UI;
-
-//public class Coincount : MonoBehaviour
-//{
-//    public int count; // Số tiền hiện có của player
-//    public Text text; // Hiển thị số tiền
-//    private bool canInteract = false; // Xác định xem player có thể tương tác với Work hay không
-
-//    void Start()
-//    {
-//        count = PlayerPrefs.GetInt("amount");
-//        UpdateText();
-//    }
-
-//    void Update()
-//    {
-//        // Nếu player đang ở gần Work và nhấn phím E
-//        if (canInteract && Input.GetKeyDown(KeyCode.E))
-//        {
-//            count += 1;
-//            PlayerPrefs.SetInt("amount", count);
-//            UpdateText();
-//            Debug.Log("Player đã tương tác với đối tượng Work và nhận được 1 coin.");
-//        }
-//    }
-
-//    void OnTriggerEnter2D(Collider2D other)
-//    {
-//        // Kiểm tra va chạm với đối tượng có tag "Work"
-//        if (other.CompareTag("Work"))
-//        {
-//            canInteract = true;
-//            Debug.Log("Player đã vào phạm vi tương tác của Work.");
-//        }
-//        // Kiểm tra va chạm với đối tượng có tag "pay"
-//        else if (other.CompareTag("pay"))
-//        {
-//            PayObject payObject = other.GetComponent<PayObject>();
-//            if (payObject != null)
-//            {
-//                count -= payObject.cost;
-
-//                // Đảm bảo tiền không xuống dưới 0
-//                if (count < 0)
-//                {
-//                    count = 0;
-//                }
-
-//                PlayerPrefs.SetInt("amount", count);
-//                UpdateText();
-
-//                Debug.Log("Player chạm vào vật thể pay, trừ tiền: " + payObject.cost);
-//            }
-//        }
-//    }
-
-//    void OnTriggerExit2D(Collider2D other)
-//    {
-//        // Kiểm tra khi player rời khỏi phạm vi của Work
-//        if (other.CompareTag("Work"))
-//        {
-//            canInteract = false;
-//            Debug.Log("Player đã rời khỏi phạm vi tương tác của Work.");
-//        }
-//    }
-
-//    void UpdateText()
-//    {
-//        text.text = count.ToString();
-//    }
-//}
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -87,6 +10,15 @@ public class Coincount : MonoBehaviour
     public int energy = 100; // Điểm năng lượng
     public int health = 100; // Điểm sức khỏe
     public int happy = 100; // Điểm hạnh phúc
+
+    private int lastPaidDay = 0; // Lưu ngày cuối cùng trả tiền
+    public GameObject dialogueBox; // Hộp thoại để xác nhận thanh toán
+    public Text dialogueText; // Nội dung hộp thoại
+    private PayObject pendingPayObject; // Lưu trữ object cần thanh toán
+
+    private bool isDialogueActive = false; // Kiểm tra xem Panel có đang mở không
+    public PlayerMovement playerMovement; // Tham chiếu đến script điều khiển người chơi
+
 
     public Text countText; // Hiển thị số tiền
     public Text energyText; // Hiển thị năng lượng
@@ -123,10 +55,15 @@ public class Coincount : MonoBehaviour
         {
             gameManager.Sleep();
         }
+        if (dialogueBox.activeSelf && Input.GetKeyDown(KeyCode.E))
+        {
+            ConfirmPayment();
+        }
+
     }
 
-  
-        void OnTriggerEnter2D(Collider2D other)
+
+    void OnTriggerEnter2D(Collider2D other)
     {
         // Kiểm tra va chạm với đối tượng có tag "Work"
         if (other.CompareTag("Work"))
@@ -138,26 +75,41 @@ public class Coincount : MonoBehaviour
         else if (other.CompareTag("pay"))
         {
             PayObject payObject = other.GetComponent<PayObject>();
-            if (payObject != null)
+            if (payObject != null && gameManager.currentDay >= lastPaidDay + 30)
             {
-                count -= payObject.cost;
+                Debug.Log("Đã đến hạn thanh toán, mở hộp thoại!");
 
-                // Đảm bảo tiền không xuống dưới 0
-                if (count < 0)
-                {
-                    count = 0;
-                }
+                // Hiển thị hộp thoại
+                dialogueBox.SetActive(true);
+                dialogueText.text = "Bạn cần thanh toán " + payObject.cost + " tiền. Nhấn E để xác nhận.";
 
-                PlayerPrefs.SetInt("amount", count);
-                UpdateUI();
+                pendingPayObject = payObject; // Lưu object để xử lý khi nhấn E
+                isDialogueActive = true; // Đánh dấu hộp thoại đang mở
 
-                Debug.Log("Player chạm vào vật thể pay, trừ tiền: " + payObject.cost);
+                // **Dừng di chuyển ngay lập tức**
+                StopPlayerMovement();
             }
         }
+
+
+
         if (other.CompareTag("SleepPoint"))
         {
             canSleep = true;
             Debug.Log("Player đã vào phạm vi SleepPoint.");
+        }
+    }
+    void StopPlayerMovement()
+    {
+        // **Tắt điều khiển**
+        playerMovement.enabled = false;
+
+        // **Nếu Player dùng Rigidbody2D, đặt vận tốc về 0**
+        Rigidbody2D rb = playerMovement.GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.velocity = Vector2.zero;
+            rb.constraints = RigidbodyConstraints2D.FreezePositionX; // **Đóng băng di chuyển**
         }
     }
 
@@ -219,4 +171,37 @@ public class Coincount : MonoBehaviour
         // Reset scene (nếu cần thiết)
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+    void ConfirmPayment()
+    {
+        if (pendingPayObject != null)
+        {
+            count -= pendingPayObject.cost;
+            count = Mathf.Max(count, 0); // Đảm bảo không xuống âm
+
+            PlayerPrefs.SetInt("amount", count);
+            lastPaidDay = gameManager.currentDay; // Cập nhật ngày cuối thanh toán
+            UpdateUI();
+
+            Debug.Log("Đã thanh toán " + pendingPayObject.cost + " vào ngày " + lastPaidDay);
+        }
+
+        // Đóng hộp thoại
+        dialogueBox.SetActive(false);
+        pendingPayObject = null;
+        isDialogueActive = false;
+
+        // **Bật lại điều khiển**
+        playerMovement.enabled = true;
+
+        // **Mở khóa di chuyển**
+        Rigidbody2D rb = playerMovement.GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.constraints = RigidbodyConstraints2D.None;
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation; // Chỉ khóa xoay, không khóa di chuyển
+        }
+    }
+
+
+
 }

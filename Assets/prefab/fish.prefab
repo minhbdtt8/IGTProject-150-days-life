@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  spawnArea: {fileID: 0}
+  spawnArea: {fileID: 7335576673750935255, guid: 040862c7d5502a84ab328c30267e2f73, type: 3}
 --- !u!58 &-8297190959929116112
 CircleCollider2D:
   m_ObjectHideFlags: 0

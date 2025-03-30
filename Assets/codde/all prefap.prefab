@@ -894,10 +894,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 485673865214190466}
-  groundCheck: {fileID: 6533499595463233832}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
+  playerAnimator: {fileID: 0}
 --- !u!114 &2077507260105408025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5110,7 +5107,7 @@ Transform:
   m_Children:
   - {fileID: 4806394138128123357}
   - {fileID: 6845832152271988505}
-  - {fileID: 4975237440856242780}
+  - {fileID: 9179051197025315477}
   - {fileID: 6512517876215728901}
   m_Father: {fileID: 9170914308167614973}
   m_RootOrder: -1
@@ -5477,7 +5474,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 040862c7d5502a84ab328c30267e2f73, type: 3}
---- !u!4 &4975237440856242780 stripped
+--- !u!4 &9179051197025315477 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7335576673750935255, guid: 040862c7d5502a84ab328c30267e2f73, type: 3}
   m_PrefabInstance: {fileID: 1922964957650062402}
