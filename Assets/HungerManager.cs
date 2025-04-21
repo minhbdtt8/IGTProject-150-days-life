@@ -12,7 +12,7 @@ public class HungerManager : MonoBehaviour
     private string[] foodOptions = { "Pizza", "Burger", "Sushi", "Salad", "Pasta" };
     private string favoriteFood;
     private float timeCounter = 0f;
-    private float hungerDecreaseInterval = 300f; // Giảm đói mỗi 5 phút (thời gian thực)
+    private float hungerDecreaseInterval = 100f; // Giảm đói mỗi 5 phút (thời gian thực)
 
     void Start()
     {

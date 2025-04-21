@@ -2,23 +2,42 @@
 
 public class FoodItem : MonoBehaviour
 {
-    public string foodName; // Tên món ăn
+    public string foodName;
+    private bool isPlayerNearby = false;
+    private GameObject player;
 
-    private void OnTriggerEnter2D(Collider2D other)
+    void Update()
     {
-        Debug.Log("Chạm vào: " + other.gameObject.name); // Kiểm tra xem có va chạm không
-
-        if (other.CompareTag("Player")) // Kiểm tra player có chạm không
+        if (isPlayerNearby && Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("Player chạm vào đồ ăn: " + foodName);
-
-            HungerManager hungerManager = other.GetComponent<HungerManager>();
+            Debug.Log("Test nút E");
+            HungerManager hungerManager = player.GetComponent<HungerManager>();
             if (hungerManager != null)
             {
                 hungerManager.EatFood(foodName);
-                Destroy(gameObject); // Xóa object sau khi ăn
+                Destroy(gameObject);
+                Debug.Log("Đang đứng gần và đã nhấn E");
+
             }
         }
     }
-}
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            isPlayerNearby = true;
+            player = other.gameObject;
+            Debug.Log("Player đứng gần món ăn: " + foodName);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            isPlayerNearby = false;
+            player = null;
+        }
+    }
+}
