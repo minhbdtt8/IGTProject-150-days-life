@@ -12,7 +12,7 @@ public class HungerManager : MonoBehaviour
     private string[] foodOptions = { "Pizza", "Burger", "Sushi", "Salad", "Pasta" };
     private string favoriteFood;
     private float timeCounter = 0f;
-    private float hungerDecreaseInterval = 100f; // Giảm đói mỗi 5 phút (thời gian thực)
+    private float hungerDecreaseInterval = 100f; // Giảm đói mỗi 100 giây
 
     void Start()
     {
@@ -48,13 +48,23 @@ public class HungerManager : MonoBehaviour
         hunger = Mathf.Max(hunger - 10, 0);
         if (hunger == 0)
         {
-            Debug.Log("Player is starving!");
+            Debug.Log("Player is starving! Quitting game...");
+            QuitGame();
         }
         UpdateUI();
     }
 
-    void UpdateUI()
+    public void UpdateUI()
     {
         hungerText.text = "Hunger: " + hunger;
+    }
+
+    void QuitGame()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
     }
 }

@@ -57,12 +57,7 @@ public class GameManager : MonoBehaviour
         currentDay = 0;
         timer = dayDuration;
 
-        // Đặt lại tiền và ngày của player
-        playerStats.count = 0;
-        playerStats.energy = 100;
-        playerStats.health = 100;
-        playerStats.happy = 100;
-        playerStats.UpdateUI();
+        
 
         // Tải lại scene
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);

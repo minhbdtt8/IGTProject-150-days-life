@@ -60,7 +60,7 @@ public class Coincount : MonoBehaviour
 
         if (canSleep && Input.GetKeyDown(KeyCode.E))
         {
-            gameManager.Sleep();
+            //gameManager.Sleep(SleepType.Normal);
         }
 
         if (dialogueBox.activeSelf && Input.GetKeyDown(KeyCode.E))
@@ -198,12 +198,25 @@ public class Coincount : MonoBehaviour
     {
         if (pendingPayObject != null)
         {
-            count -= pendingPayObject.cost;
-            count = Mathf.Max(count, 0);
-            PlayerPrefs.SetInt("amount", count);
-            lastPaidDay = gameManager.currentDay;
-            UpdateUI();
-            Debug.Log("Đã thanh toán " + pendingPayObject.cost + " vào ngày " + lastPaidDay);
+            if (count >= pendingPayObject.cost)
+            {
+                // Đủ tiền → trừ tiền và thanh toán
+                count -= pendingPayObject.cost;
+                count = Mathf.Max(count, 0);
+                PlayerPrefs.SetInt("amount", count);
+                lastPaidDay = gameManager.currentDay;
+                UpdateUI();
+                Debug.Log("Đã thanh toán " + pendingPayObject.cost + " vào ngày " + lastPaidDay);
+            }
+            else
+            {
+                Debug.Log("Không đủ tiền để thanh toán! Thoát game.");
+#if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+#else
+            Application.Quit();
+#endif
+            }
         }
 
         dialogueBox.SetActive(false);
@@ -211,6 +224,7 @@ public class Coincount : MonoBehaviour
         isDialogueActive = false;
         ResumePlayerMovement();
     }
+
 
     void ResetLevel()
     {
